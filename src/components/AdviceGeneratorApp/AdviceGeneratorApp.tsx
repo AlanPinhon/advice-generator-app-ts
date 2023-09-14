@@ -1,4 +1,9 @@
+import { getAdvices } from "../../helpers/getAdvices"
+
 export const AdviceGeneratorApp = () => {
+
+  getAdvices();
+
   return (
     <main>
       <h4>Advice # 117</h4>
