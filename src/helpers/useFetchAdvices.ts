@@ -4,16 +4,24 @@ import { Advice } from "../types/AdviceTypes";
 
 export const useFetchAdvices = () => {
 
-  const [adviceState, setAdviceState] = useState<Advice>();
+  const [advice, setAdvice] = useState<Advice>();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
   const getTips = async () => {
-    const newAdvice = await getAdvices();
-    setAdviceState(newAdvice);
+    try {
+      const newAdvice = await getAdvices();
+      setAdvice(newAdvice);
+      setIsLoading(false);
+    } catch (error) {
+      setError(error as Error);
+      setIsLoading(false);
+    }
   }
 
   useEffect(() => {
     getTips();
   },[]);
   
-  return { adviceState, getTips }
+  return { advice, error, isLoading , getTips }
 }
