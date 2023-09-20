@@ -11,6 +11,6 @@ describe('test in getAdvices', () => {
       advice: expect.any(String)
     });
 
-  });
+  })
 
 })
