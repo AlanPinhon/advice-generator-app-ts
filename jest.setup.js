@@ -1,4 +1,5 @@
-// jest.config.js
-export default {
-  setupFilesAfterEnv: ['./jest.setup.js']
-};
+import { server } from "./src/mocks/server";
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close())
