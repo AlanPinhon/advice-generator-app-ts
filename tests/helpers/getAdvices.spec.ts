@@ -1,9 +1,4 @@
 import { getAdvices } from '../../src/helpers/getAdvices';
-import { server } from '../../src/mocks/server';
-
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close())
 
 describe('test in getAdvices', () => { 
 
