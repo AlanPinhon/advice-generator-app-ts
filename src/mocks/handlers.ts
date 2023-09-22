@@ -1,17 +1,9 @@
 import { rest } from 'msw';
+import mockAdviceResponse from './mock.advice.json';
 
 export const handlers = [
 
-  rest.get('https://api.adviceslip.com/advice', (req,res,ctx) => {
-    return res(
-      ctx.json(
-        {
-          "slip": {
-            "id": "2",
-            "advice": "Smile and the world smiles with you. Frown and you're on your own."
-          }
-        }
-      )
-    )
-  })
+  rest.get('https://api.adviceslip.com/advice', (_req,res,ctx) => {
+    return res( ctx.json(mockAdviceResponse) )
+  }),
 ];
