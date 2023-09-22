@@ -1,0 +1,60 @@
+.loading-text{
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--dark-grayish-blue);
+  color: var(--light-cyan);
+}
+
+.error-msg{
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--dark-grayish-blue);
+  color: lightcoral;
+}
+
+.advice-app-container{
+  background-color: var(--dark-grayish-blue);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 33.5rem;
+  height: 21rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.advice-id{
+  letter-spacing: .3rem;
+  font-size: .8rem;
+  color: var(--neon-green);
+  font-weight: 500;
+}
+
+.advice-text{
+  padding: 1rem 0;
+  font-size: var(--quote-font-size);
+  font-weight: var(--quote-font-weight);
+  color: var(--light-cyan);
+}
+
+.advice-btn{
+  position: absolute;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--neon-green);
+  bottom: -2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s ease-in-out;
+
+  &:hover{
+    box-shadow: 0 0 2rem var(--neon-green);
+  }
+}
