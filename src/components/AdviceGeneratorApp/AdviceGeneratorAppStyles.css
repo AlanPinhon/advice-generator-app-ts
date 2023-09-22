@@ -5,13 +5,6 @@
   color: var(--light-cyan);
 }
 
-.error-msg{
-  border-radius: 1rem;
-  padding: 2rem;
-  background-color: var(--dark-grayish-blue);
-  color: lightcoral;
-}
-
 .advice-app-container{
   background-color: var(--dark-grayish-blue);
   position: relative;
@@ -27,6 +20,7 @@
 }
 
 .advice-id{
+  text-transform: uppercase;
   letter-spacing: .3rem;
   font-size: .8rem;
   color: var(--neon-green);
