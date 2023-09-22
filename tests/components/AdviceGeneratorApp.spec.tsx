@@ -13,7 +13,7 @@ describe('tests on <AdviceGeneratorApp />', () => {
 
   });
 
-  test('Should display an error message if the connection to the server fails', async () => {
+  test('Should display an error message if the network status is different to 200', async () => {
 
     server.use(
       rest.get('https://api.adviceslip.com/advice', (_req,res,ctx) => {
@@ -28,6 +28,20 @@ describe('tests on <AdviceGeneratorApp />', () => {
     const errorMsg = await screen.findByText('Network request failed');
     expect(errorMsg).toBeTruthy();
   });
+  
+  test('Should display an error message if the connection to the server fails', async () => {
+
+    server.use(
+      rest.get('https://api.adviceslip.com/advice', (_req,res) => {
+        return res.networkError('Network request failed')
+      }) 
+    );
+
+    render(<AdviceGeneratorApp/>);
+    
+    const errorMsg = await screen.findByText('Network request failed');
+    expect(errorMsg).toBeTruthy();
+  });
 
   test('should show advice', async () => {
 
@@ -35,7 +49,6 @@ describe('tests on <AdviceGeneratorApp />', () => {
     
     const adviceId = await screen.findByText('Advice # 2');
     const advice = await screen.findByText("Smile and the world smiles with you. Frown and you're on your own.");
-    screen.debug();
 
     expect(adviceId).toBeTruthy();
     expect(advice).toBeTruthy();
