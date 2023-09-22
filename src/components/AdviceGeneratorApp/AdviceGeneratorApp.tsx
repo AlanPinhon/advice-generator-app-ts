@@ -13,7 +13,7 @@ export const AdviceGeneratorApp = () => {
     <main className="advice-app-container">
 
       <section>
-        <h4 className="advice-id">Advice # {advice?.id}</h4>
+        <h4 className="advice-id">Advice #{advice?.id}</h4>
         <h1 className="advice-text">"{advice?.advice}"</h1>
       </section>
       
