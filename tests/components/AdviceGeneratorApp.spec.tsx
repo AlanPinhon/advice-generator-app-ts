@@ -47,8 +47,8 @@ describe('tests on <AdviceGeneratorApp />', () => {
 
     render(<AdviceGeneratorApp/>);
     
-    const adviceId = await screen.findByText('Advice # 2');
-    const advice = await screen.findByText("Smile and the world smiles with you. Frown and you're on your own.");
+    const adviceId = await screen.findByText('Advice #2');
+    const advice = await screen.findByText("\"Smile and the world smiles with you. Frown and you're on your own.\"");
 
     expect(adviceId).toBeTruthy();
     expect(advice).toBeTruthy();

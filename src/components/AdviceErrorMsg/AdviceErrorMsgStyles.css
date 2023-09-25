@@ -1,0 +1,37 @@
+.error-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--dark-grayish-blue);
+
+  & .warn-icon{
+    width: 3rem;
+  }
+
+  & .error-msg{
+    margin: 1.5rem 0;
+    color: lightcoral;
+    font-size: var(--quote-font-size);
+  }
+
+  & .retry-btn{
+    font-family: 'Manrope', sans-serif;
+    font-weight: var(--quote-font-weight);
+    font-size: .9rem;
+    color: var(--light-cyan);
+    border: none;
+    background-color: var(--grayish-blue);
+    border-radius: .5rem;
+    padding: .75rem 1.5rem;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    
+    &:hover{
+      background-color: var(--light-cyan);
+      box-shadow: 0 0 2rem var(--light-cyan);
+      color: var(--grayish-blue);
+    }
+  }
+}

@@ -13,6 +13,7 @@ export const useFetchAdvices = () => {
       const newAdvice = await getAdvices();
       setAdvice(newAdvice);
       setIsLoading(false);
+      setError(null)
     } catch (error) {
       setError(error as Error);
       setIsLoading(false);
