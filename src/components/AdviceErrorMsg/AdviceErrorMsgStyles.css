@@ -1,9 +1,12 @@
 .error-container{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  width: 23.5rem;
+  height: 14.9rem;
   background-color: var(--dark-grayish-blue);
 
   & .warn-icon{
@@ -11,9 +14,9 @@
   }
 
   & .error-msg{
-    margin: 1.5rem 0;
     color: lightcoral;
     font-size: var(--quote-font-size);
+    text-align: center;
   }
 
   & .retry-btn{
@@ -34,4 +37,20 @@
       color: var(--grayish-blue);
     }
   }
+}
+
+@media screen and (max-width: 580px){
+
+  .error-container{
+    width: 18rem;
+    height: 18rem;
+    padding: 2rem;
+
+    & .error-msg{
+      margin: 1.5rem 0;
+      color: lightcoral;
+      font-size: var(--quote-font-size);
+    }
+  }
+
 }
