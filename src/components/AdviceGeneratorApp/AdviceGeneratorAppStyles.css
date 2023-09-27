@@ -35,7 +35,7 @@
 }
 
 .divider{
-  background-image: url('/public/assets/images/pattern-divider-desktop.svg');
+  background-image: url('/assets/images/pattern-divider-desktop.svg');
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -69,7 +69,7 @@
   }
 
   .divider{
-    background-image: url('/public/assets/images/pattern-divider-mobile.svg');
+    background-image: url('/assets/images/pattern-divider-mobile.svg');
     height: 1.3rem;
   }
 }
