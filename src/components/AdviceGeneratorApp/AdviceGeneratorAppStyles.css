@@ -28,10 +28,18 @@
 }
 
 .advice-text{
-  padding: 1rem 0;
+  padding-top: 1.5rem;
   font-size: var(--quote-font-size);
   font-weight: var(--quote-font-weight);
   color: var(--light-cyan);
+}
+
+.divider{
+  background-image: url('/assets/images/pattern-divider-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 1.3rem;
 }
 
 .advice-btn{
@@ -50,5 +58,18 @@
 
   &:hover{
     box-shadow: 0 0 2rem var(--neon-green);
+  }
+}
+
+@media screen and (max-width: 580px){
+  .advice-app-container{
+    width: 20rem;
+    height: 25rem;
+    padding: 1.5rem;
+  }
+
+  .divider{
+    background-image: url('/assets/images/pattern-divider-mobile.svg');
+    height: 1.3rem;
   }
 }

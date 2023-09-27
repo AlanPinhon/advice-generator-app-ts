@@ -17,7 +17,7 @@ export const AdviceGeneratorApp = () => {
         <h1 className="advice-text">"{advice?.advice}"</h1>
       </section>
       
-      <img className="divider" src="/assets/images/pattern-divider-desktop.svg" alt="divider" />
+      <div className="divider"></div>
       
       <button className="advice-btn" onClick={getTips}>
         <img src="/assets/images/icon-dice.svg" alt="icon-dice" />
