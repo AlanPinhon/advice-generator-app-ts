@@ -3,11 +3,10 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
 import { AdviceErrorMsg } from '../../src/components/AdviceErrorMsg/AdviceErrorMsg';
 
-const getTipsMock = vi.fn();
-
 describe('tests in <AdviceErrorMsg />', () => {
 
   test('should show the initial state', () => {
+    const getTipsMock = vi.fn();
     render(<AdviceErrorMsg getTips={getTipsMock}/>);
     
     expect(screen.getByText('Network request failed')).toBeTruthy();
